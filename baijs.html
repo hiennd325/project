@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tinh() {
+            var day = parseInt(document.getElementById("day").value);
+            var ngay = 20 * 8;
+            var thang = ngay * day;
+            var bonus = 0;
+            var rank = 'C';
+            if (day > 25) {
+                rank = 'A';
+                bonus = 500;
+            }
+            else if (day >= 20) {
+                rank = 'B';
+                bonus = 300;
+            }
+            var total = thang + bonus;
+            document.getElementById("ngay").value = ngay;
+            document.getElementById("thang").value = ngay;
+            document.getElementById("rank").value = rank;
+            document.getElementById("bonus").value = bonus;
+            document.getElementById("total").value = total;
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <table border="1">
+                <tr>
+                    <th colspan="2">
+                        <h1>Bang tinh luong cho cong nhan</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <td><label for="">Ten nhan vien</label></td>
+                    <td>
+                        <input type="text" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">So ngay lam viec</label></td>
+                    <td>
+                        <input type="number" name="" id="day">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Luong ngay</label></td>
+                    <td>
+                        <input type="number" name="" id="ngay">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Luong thang</label></td>
+                    <td>
+                        <input type="number" name="" id="thang">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Xep loai nhan vien</td>
+                    <td><input type="text" name="" id="rank"></td>
+                </tr>
+                <tr>
+                    <td>Thuong</td>
+                    <td><input type="number" id="bonus"></td>
+                </tr>
+                <tr>
+                    <td>Thuc linh</td>
+                    <td><input type="number" name="" id="total"></td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td colspan="2">
+                        <button type="button" id="calculate" onclick="tinh()">Tinh luong</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
